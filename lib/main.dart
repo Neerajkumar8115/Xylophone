@@ -15,19 +15,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   void AudioName(int music) {
     final player = AudioPlayer();
-    player.play(DeviceFileSource('music/music$music.wav'));
+    player.setSourceAsset('music/music$music.wav');
   }
-
-  // Expanded buildKey({Color:Color, required int soundNumber}) {
-  //   return Expanded(
-  //     child: TextButton(
-  //       onPressed: () {
-  //         AudioName(soundNumber);
-  //       },
-  //       child: const Text(''),
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
